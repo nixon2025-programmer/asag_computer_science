@@ -1,0 +1,54 @@
+
+
+# ---- Core Web Framework ----
+Flask==3.0.2
+Werkzeug==3.0.1
+
+# ---- Database ----
+SQLAlchemy==2.0.29
+psycopg2-binary==2.9.9
+
+# ---- Data Validation ----
+pydantic==2.7.1
+
+# ---- Environment Config ----
+python-dotenv==1.0.1
+python-dateutil==2.9.0.post0
+
+# ---- Text extraction (no OCR) ----
+pdfplumber==0.11.4
+python-docx==1.1.2
+
+# ==============================
+# MindSpore + MindNLP
+# ==============================
+# Pin MindNLP version (you are using 0.5.1)
+mindnlp==0.5.1
+
+# Pin MindSpore to avoid accidental downgrade/upgrade during install.
+# Use the version that matches your platform/driver best.
+# If you already know you want 2.8.0, change this to 2.8.0.
+mindspore==2.7.0
+
+# ==============================
+# HuggingFace stack (MindNLP depends on this)
+# ==============================
+# IMPORTANT: Do NOT use transformers 5.x here
+transformers==4.56.2
+tokenizers==0.22.2
+huggingface-hub==0.36.2
+
+# PEFT required by MindNLP + diffusers compatibility checks
+peft==0.17.0
+
+# MindNLP imports diffusers at import-time in 0.5.1
+# Pin diffusers to keep it consistent with PEFT
+diffusers==0.36.0
+
+# Optional but commonly required by HF stacks
+accelerate==1.12.0
+safetensors==0.7.0
+sentencepiece==0.2.1
+tqdm==4.67.3
+regex==2026.2.28
+requests==2.32.5
